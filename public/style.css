@@ -48,7 +48,7 @@ body {
   color: #000;
   font-size: 12px;
   line-height: 1.4;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -77,4 +77,23 @@ header{
   background-color: #2C3E50;
   display: flex;
   flex-direction: row;
+  color: white;
+}
+.logo{
+  height: 100px;
+  width: 95px;
+}
+.picture{
+  height: 590px;
+  width: 840px;
+}
+.location{
+  display: flex;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: lighter;
+}
+a{
+  color: white;
+  text-decoration: none;
 }
