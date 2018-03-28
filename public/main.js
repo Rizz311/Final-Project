@@ -18,6 +18,61 @@ $( document ).ready(function() {
   })
 });
 
+var findMe = ()=>{
+  console.log('Found You.');
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      map.setCenter(pos);
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        title: 'Your Location'
+      });
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+  }
+  function initMap() {
+    var uluru = {
+      lat: 42.292557,
+      lng: -71.080269
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+      title:
+    });
+    infoWindow = new google.maps.InfoWindow;
+    infoWindow.open(map);
+    $(()=>{
+      setInterval(findMe,1000)
+    })
+}
+    // Try HTML5 geolocation.
+
+
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");
 

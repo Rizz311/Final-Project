@@ -26,6 +26,10 @@ module.exports = function(app, passport, db) {
     app.get('/info', function(req, res) {
         res.render('info.ejs');
     });
+    // MAPS SECTION =========================
+    app.get('/maps', function(req, res) {
+        res.render('maps.ejs');
+    });
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {

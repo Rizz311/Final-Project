@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Maps</title>
-  </head>
-  <body>
-    <h1>Maps</h1>
-  </body>
+
+<head>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>My Google Maps Demo</h3>
+  <div id="map"></div>
+  <script type="text/javascript" src="main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFUqgOl-Dso6GeepiQTKvSMdPxcIRICUA&callback=initMap"></script>
+</body>
+
 </html>
