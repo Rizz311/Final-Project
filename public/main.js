@@ -9,6 +9,7 @@ var carousel = ()=>{
     }
   $('#images').attr('src','img/' + imgPath[pic]);
 }
+
 $(()=>{
   setInterval(carousel,3000)
 })
@@ -17,62 +18,31 @@ $( document ).ready(function() {
    $('.list').toggleClass('opened');
   })
 });
-
-var findMe = ()=>{
-  console.log('Found You.');
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      map.setCenter(pos);
-      var marker = new google.maps.Marker({
-        position: pos,
-        map: map,
-        title: 'Your Location'
-      });
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
+function initMap(){
+  //Map starts at going to make the switch to Geolocation
+  var start = {
+    zoom: 15,
+    center: {lat:42.3601, lng:-71.0589}
   }
-}
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-    'Error: The Geolocation service failed.' :
-    'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-  }
-  function initMap() {
-    var uluru = {
-      lat: 42.292557,
-      lng: -71.080269
-    };
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 17,
-      center: uluru
-    });
+  //My Map
+  var map = new google.maps.Map(document.getElementById('map'), start);
+
+  //Add Marker to a location
+  addMarker({lat:42.292501, lng:-71.080053});//Lee School
+  addMarker({lat:42.332047, lng:-71.098164});//Tobin CC
+  addMarker({lat:42.277112, lng:-71.090677});//Mildred
+  addMarker({lat:42.276271, lng:-71.103760});//Mattahunt
+  addMarker({lat:42.305913, lng:-71.074164}); //Holland
+  addMarker({lat:42.307794, lng:-71.080700}); //Burke HS
+  addMarker({lat:42.137931, lng:-71.125091});//Stoughton 24 Hour
+
+  function addMarker(locations){
     var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-      title:
+    position:locations,
+    map:map
     });
-    infoWindow = new google.maps.InfoWindow;
-    infoWindow.open(map);
-    $(()=>{
-      setInterval(findMe,1000)
-    })
+  }
 }
-    // Try HTML5 geolocation.
-
-
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");
 
