@@ -22,6 +22,12 @@ module.exports = function(app, passport, db) {
         res.render('connections.ejs');
     });
 
+    // EVENTS SECTION =========================
+    app.get('/events', function(req, res) {
+        res.render('events.ejs');
+        console.log("Adding Handler");
+    });
+
     // PROFILE SECTION =========================
     app.get('/profile', function(req, res) {
         res.render('profile.ejs');
