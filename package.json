@@ -1,6 +1,9 @@
 {
   "name": "node-authentication",
   "main": "server.js",
+  "scripts": {
+    "wereat": "nodemon server.js"
+  },
   "dependencies": {
     "express": "~4.14.0",
     "ejs": "~2.5.2",
@@ -16,12 +19,9 @@
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "method-override": "~2.3.6",
-    "express-session": "~1.14.1",
-    "scripts":{
-      "wereat": "nodemon server.js"
-    }
+    "express-session": "~1.14.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.3"
   }
 }
