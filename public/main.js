@@ -369,12 +369,12 @@ function initMap(){
 
   //Add Marker to a location
   //addMarker({lat:42.292501, lng:-71.080053});//Lee School
-  // addMarker({lat:42.332047, lng:-71.098164});//Tobin CC
-  // addMarker({lat:42.277112, lng:-71.090677});//Mildred
-  // addMarker({lat:42.276271, lng:-71.103760});//Mattahunt
-  // addMarker({lat:42.305913, lng:-71.074164}); //Holland
-  // addMarker({lat:42.307794, lng:-71.080700}); //Burke HS
-  // addMarker({lat:42.137931, lng:-71.125091});//Stoughton 24 Hour
+  // addMarker({lat:});//Tobin CC
+  // addMarker({lat:});//Mildred
+  // addMarker({lat:});//Mattahunt
+  // addMarker({lat:}); //Holland
+  // addMarker({lat:}); //Burke HS
+  // addMarker({lat:});//Stoughton 24 Hour
 
   // function addMarker(locations){
   //   var marker = new google.maps.Marker({
@@ -382,7 +382,8 @@ function initMap(){
   //   map:map
   //   });
   // }
-  var iconBase = ["img/ymca.gif", "img/cc.png", "img/out.png"];
+  //Array of icons I will be using
+  var iconBase = ['img/ymca.gif', 'img/cc.png', 'img/out.png', '247.png'];
         var icons = {
           ymca: {
             name: 'YMCA',
@@ -395,15 +396,65 @@ function initMap(){
           out: {
             name: 'Outdoors',
             icon: 'img/out.png'
+          },
+          ff: {
+            name: '24/7',
+            icon: 'img/247.png'
           }
         };
-
+//Latitude and Longitude coordinates for the markers
         var features = [
           {
             position: new google.maps.LatLng(42.292501, -71.080053), //Lee School
             type: 'cc'
-          }]       // Create markers.
-        features.forEach(function(feature) {
+          }, {
+            position: new google.maps.LatLng(42.332047, -71.098164), //Tobin CC
+            type: 'cc'
+          }, {
+            position: new google.maps.LatLng(42.277112, -71.090677), //Mildred
+            type: 'cc'
+          }, {
+            position: new google.maps.LatLng(42.276271, -71.103760), //Mattahunt
+            type: 'cc'
+          }, {
+            position: new google.maps.LatLng(42.305913, -71.074164), //Holland
+            type: 'cc'
+          }, {
+            position: new google.maps.LatLng(42.307794, -71.080700), //Burke HS
+            type: 'cc'
+          }, {
+            position: new google.maps.LatLng(42.137931, -71.125091), //Stoughton 24/7
+            type: 'ff'
+          }, {
+            position: new google.maps.LatLng(42.343629, -71.080232),//Titus Sparrow Park
+            type: 'out'
+          }, {
+            position: new google.maps.LatLng(42.307588, -71.108401),//Scagnoli-Nihill Park
+            type: 'out'
+          }, {
+            position: new google.maps.LatLng(42.341446, -71.096521),//Fenway Park
+            type: 'out'
+          }, {
+            position: new google.maps.LatLng(42.331767, -71.126290),//Brookline High Park
+            type: 'out'
+          }, {
+            position: new google.maps.LatLng(42.295340, -71.154227),//Hynes Park
+            type: 'out'
+          }, {
+            position: new google.maps.LatLng(42.283290, -71.156660),//Parkway YMCA
+            type: 'ymca'
+          }, {
+            position: new google.maps.LatLng(42.284731, -71.070926),//Dorchester YMCA
+            type: 'ymca'
+          }, {
+            position: new google.maps.LatLng(42.317781, -71.082908),//Roxbury YMCA
+            type: 'ymca'
+          }, {
+            position: new google.maps.LatLng(42.348618, -71.064682),//Chinatown YMCA
+            type: 'ymca'
+          }
+        ];     // Creates corrosponding markers
+        features.forEach(function(feature){
           console.log('Make Marker', + feature.position);
           var marker = new google.maps.Marker({
             position: feature.position,

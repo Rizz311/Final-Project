@@ -55,6 +55,7 @@ body {
   font-size: 12px;
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
+  background: #C4C4C4;
 }
 
 /******************************************
@@ -78,12 +79,9 @@ header {
   display: flex;
   flex-direction: row;
   color: white;
-  justify-content: flex-start;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .logo {
@@ -106,8 +104,15 @@ section {
 a {
   color: white;
   text-decoration: none;
+  border: 1px solid grey;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: #C4C4C4;
+  color: black;
+}
+
+.container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-content: flex-end;
+  flex-flow: column;
+  align-items: center;
 }
