@@ -1,0 +1,18 @@
+#map {
+  height: 950px;
+  width: 100%;
+}
+
+#legend {
+  background: #fff;
+  border: 1px solid black;
+}
+
+.sidePanel {
+  border: 1px solid white;
+  z-index: 1;
+  height: 100%;
+  width: 100px;
+  background: black;
+  /* display: none; */
+}
