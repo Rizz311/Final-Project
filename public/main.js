@@ -47,52 +47,84 @@ function initMap(){
   var features = [
     {
       position: new google.maps.LatLng(42.292501, -71.080053), //Lee School
-      type: 'cc'
+      type: 'cc',
+      title: 'Lee School',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.332047, -71.098164), //Tobin CC
-      type: 'cc'
+      type: 'cc',
+      title: 'Tobin Community Center',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.277112, -71.090677), //Mildred
-      type: 'cc'
+      type: 'cc',
+      title: 'Mildred Ave Community Center',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.276271, -71.103760), //Mattahunt
-      type: 'cc'
+      type: 'cc',
+      title: 'Mattahunt',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.305913, -71.074164), //Holland
-      type: 'cc'
+      type: 'cc',
+      title: 'Holland',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.307794, -71.080700), //Burke HS
-      type: 'cc'
+      type: 'cc',
+      title: 'Burke HS',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.137931, -71.125091), //Stoughton 24/7
-      type: 'ff'
+      type: 'ff',
+      title: 'Family Fitness',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.343629, -71.080232),//Titus Sparrow Park
-      type: 'out'
+      type: 'out',
+      title: 'Titus Sparrow Park',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.307588, -71.108401),//Scagnoli-Nihill Park
-      type: 'out'
+      type: 'out',
+      title: 'Scagnoli-Nihill Park',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.341446, -71.096521),//Fenway Park
-      type: 'out'
+      type: 'out',
+      title: 'Fenway',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.331767, -71.126290),//Brookline High Park
-      type: 'out'
+      type: 'out',
+      title: 'Brookline High Outdoors',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.295340, -71.154227),//Hynes Park
-      type: 'out'
+      type: 'out',
+      title: 'VFW',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.283290, -71.156660),//Parkway YMCA
-      type: 'ymca'
+      type: 'ymca',
+      title: 'Parkway Y',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.284731, -71.070926),//Dorchester YMCA
-      type: 'ymca'
+      type: 'ymca',
+      title: 'Dorchester Y',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.317781, -71.082908),//Roxbury YMCA
-      type: 'ymca'
+      type: 'ymca',
+      title: 'Roxbury Y',
+      image: 'img/lee.jpg'
     }, {
       position: new google.maps.LatLng(42.348618, -71.064682),//Chinatown YMCA
-      type: 'ymca'
+      type: 'ymca',
+      title: 'Chinatown Y',
+      image: 'img/lee.jpg'
     }
   ];     // Creates corrosponding markers
   features.forEach(function(feature){
@@ -102,6 +134,14 @@ function initMap(){
       icon: icons[feature.type].icon,
       map: map
     });
+    marker.addListener('click', function(){
+      console.log('You clicked here '+ feature.title);
+    var locationName = document.getElementById('locationName');
+    var locationImage = document.createElement('img');
+    locationImage.src = feature.image
+    locationPicture.appendChild(feature.image)
+    locationName.innerHTML = '<h1>' + feature.title + '</h1>';
+    })
   });
 
   var legend = document.getElementById('legend');
@@ -116,6 +156,7 @@ function initMap(){
 
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(panel);
+
 }
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");

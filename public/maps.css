@@ -11,9 +11,15 @@
 .sidePanel {
   border: 1px solid white;
   z-index: 1;
-  height: 100%;
+  height: 90%;
   width: 25%;
   background: grey;
   /* display: none; */
   visibility: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.locationName {
+  justify-content: center;
 }
