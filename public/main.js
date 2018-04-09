@@ -54,12 +54,12 @@ function initMap(){
       position: new google.maps.LatLng(42.332047, -71.098164), //Tobin CC
       type: 'cc',
       title: 'Tobin Community Center',
-      image: 'img/lee.jpg'
+      image: 'img/tobin.jpg'
     }, {
       position: new google.maps.LatLng(42.277112, -71.090677), //Mildred
       type: 'cc',
       title: 'Mildred Ave Community Center',
-      image: 'img/lee.jpg'
+      image: 'img/mildred.jpg'
     }, {
       position: new google.maps.LatLng(42.276271, -71.103760), //Mattahunt
       type: 'cc',
@@ -74,7 +74,7 @@ function initMap(){
       position: new google.maps.LatLng(42.307794, -71.080700), //Burke HS
       type: 'cc',
       title: 'Burke HS',
-      image: 'img/lee.jpg'
+      image: 'img/burke.jpg'
     }, {
       position: new google.maps.LatLng(42.137931, -71.125091), //Stoughton 24/7
       type: 'ff',
@@ -137,9 +137,7 @@ function initMap(){
     marker.addListener('click', function(){
       console.log('You clicked here '+ feature.title);
     var locationName = document.getElementById('locationName');
-    var locationImage = document.createElement('img');
-    locationImage.src = feature.image
-    locationPicture.appendChild(feature.image)
+    var locationImage = document.getElementById('locationImage').src=feature.image;
     locationName.innerHTML = '<h1>' + feature.title + '</h1>';
     })
   });

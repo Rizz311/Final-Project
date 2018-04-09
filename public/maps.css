@@ -23,3 +23,13 @@
 .locationName {
   justify-content: center;
 }
+
+.sideImage {
+  height: 30%;
+  width: 100%;
+}
+
+#locationImage {
+  height: 100%;
+  width: 100%;
+}
