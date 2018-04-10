@@ -64,67 +64,72 @@ function initMap(){
       position: new google.maps.LatLng(42.276271, -71.103760), //Mattahunt
       type: 'cc',
       title: 'Mattahunt',
-      image: 'img/lee.jpg'
+      image: 'img/mattahunt.jpg'
     }, {
       position: new google.maps.LatLng(42.305913, -71.074164), //Holland
       type: 'cc',
       title: 'Holland',
-      image: 'img/lee.jpg'
+      image: 'img/holland.jpg'
     }, {
       position: new google.maps.LatLng(42.307794, -71.080700), //Burke HS
       type: 'cc',
       title: 'Burke HS',
       image: 'img/burke.jpg'
     }, {
+      position: new google.maps.LatLng(42.322427, -71.090405), //Shelburne
+      type: 'cc',
+      title: 'Shelburne',
+      image: 'img/shelburne.jpg'
+    }, {
       position: new google.maps.LatLng(42.137931, -71.125091), //Stoughton 24/7
       type: 'ff',
       title: 'Family Fitness',
-      image: 'img/lee.jpg'
+      image: 'img/stoughton.jpg'
     }, {
       position: new google.maps.LatLng(42.343629, -71.080232),//Titus Sparrow Park
       type: 'out',
       title: 'Titus Sparrow Park',
-      image: 'img/lee.jpg'
+      image: 'img/noimg.png'
     }, {
       position: new google.maps.LatLng(42.307588, -71.108401),//Scagnoli-Nihill Park
       type: 'out',
       title: 'Scagnoli-Nihill Park',
-      image: 'img/lee.jpg'
+      image: 'img/noimg.png'
     }, {
       position: new google.maps.LatLng(42.341446, -71.096521),//Fenway Park
       type: 'out',
       title: 'Fenway',
-      image: 'img/lee.jpg'
+      image: 'img/noimg.png'
     }, {
       position: new google.maps.LatLng(42.331767, -71.126290),//Brookline High Park
       type: 'out',
       title: 'Brookline High Outdoors',
-      image: 'img/lee.jpg'
+      image: 'img/noimg.png'
     }, {
       position: new google.maps.LatLng(42.295340, -71.154227),//Hynes Park
       type: 'out',
       title: 'VFW',
-      image: 'img/lee.jpg'
+      image: 'img/noimg.png'
     }, {
       position: new google.maps.LatLng(42.283290, -71.156660),//Parkway YMCA
       type: 'ymca',
       title: 'Parkway Y',
-      image: 'img/lee.jpg'
+      image: 'img/parkwayy.jpg'
     }, {
       position: new google.maps.LatLng(42.284731, -71.070926),//Dorchester YMCA
       type: 'ymca',
       title: 'Dorchester Y',
-      image: 'img/lee.jpg'
+      image: 'img/dorchestery.jpg'
     }, {
       position: new google.maps.LatLng(42.317781, -71.082908),//Roxbury YMCA
       type: 'ymca',
       title: 'Roxbury Y',
-      image: 'img/lee.jpg'
+      image: 'img/roxburyy.JPG'
     }, {
       position: new google.maps.LatLng(42.348618, -71.064682),//Chinatown YMCA
       type: 'ymca',
       title: 'Chinatown Y',
-      image: 'img/lee.jpg'
+      image: 'img/wangy.jpg'
     }
   ];     // Creates corrosponding markers
   features.forEach(function(feature){
@@ -138,7 +143,7 @@ function initMap(){
       console.log('You clicked here '+ feature.title);
     var locationName = document.getElementById('locationName');
     var locationImage = document.getElementById('locationImage').src=feature.image;
-    locationName.innerHTML = '<h1>' + feature.title + '</h1>';
+    locationName.innerHTML = '<h2>' + feature.title + '</h2>';
     })
   });
 
