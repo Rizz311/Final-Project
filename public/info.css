@@ -94,6 +94,19 @@ header {
   width: 840px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  flex: 1;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: lighter;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -102,28 +115,4 @@ a {
   padding: 10px 20px;
   background: #C4C4C4;
   color: black;
-}
-
-.container {
-  display: flex;
-  text-align: center;
-  font-size: 48px;
-}
-
-.user {
-  flex: 1;
-  background: #2C3E50;
-}
-
-.info {
-  background: #333333;
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-}
-
-.events {
-  list-style: none;
-  flex-direction: column;
 }
