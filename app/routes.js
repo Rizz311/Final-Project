@@ -25,7 +25,6 @@ module.exports = function(app, passport, db) {
     // EVENTS SECTION =========================
     app.get('/events', function(req, res) {
         res.render('events.ejs');
-        console.log("Adding Handler");
     });
 
     // PROFILE SECTION =========================
@@ -40,6 +39,12 @@ module.exports = function(app, passport, db) {
     // MAPS SECTION =========================
     app.get('/maps', function(req, res) {
         res.render('maps.ejs');
+    });
+
+    // LOG SECTION =========================
+    app.get('/log', function(req, res) {
+        res.render('log.ejs');
+        console.log('Render');
     });
 
     // LOGOUT ==============================

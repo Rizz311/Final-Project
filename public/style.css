@@ -101,7 +101,6 @@ a {
   text-transform: uppercase;
   padding: 10px 20px;
   background: #C4C4C4;
-  color: black;
 }
 
 .container {
@@ -123,7 +122,8 @@ a {
   flex-direction: column;
 }
 
-.events {
+ul {
   list-style: none;
-  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
 }

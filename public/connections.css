@@ -79,15 +79,9 @@ header {
   display: flex;
   flex-direction: row;
   color: white;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-}
-
-.nav {
-  justify-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .logo {
@@ -100,16 +94,22 @@ img {
   width: 200px;
 }
 
-.location {
-  flex: 1;
-  justify-content: center;
-  font-size: 64px;
-  font-weight: lighter;
-}
-
 a {
   color: white;
   text-decoration: none;
-  justify-content: flex-end;
-  align-content: flex-end;
+  border: 1px solid grey;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: #C4C4C4;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  font-size: 24px;
+  flex-direction: column;
+}
+
+.friend {
+  list-style: none;
 }

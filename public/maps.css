@@ -33,3 +33,28 @@
   height: 100%;
   width: 100%;
 }
+
+header {
+  border: 1px solid black;
+  background-color: #2C3E50;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: 95px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid grey;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: #C4C4C4;
+}
