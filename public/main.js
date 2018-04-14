@@ -49,7 +49,8 @@ function initMap(){
       position: new google.maps.LatLng(42.292501, -71.080053), //Lee School
       type: 'cc',
       title: 'Lee School',
-      image: 'img/lee.jpg'
+      image: 'img/lee.jpg',
+      description:'Best times to show up are Wednesday\'s between pm and 6 pm. Saturday\'s from 2pm to 5pm. Membership is required or a $2 dollar entry fee.'
     }, {
       position: new google.maps.LatLng(42.332047, -71.098164), //Tobin CC
       type: 'cc',
@@ -130,6 +131,7 @@ function initMap(){
       type: 'ymca',
       title: 'Chinatown Y',
       image: 'img/wangy.jpg'
+
     }
   ];     // Creates corrosponding markers
   features.forEach(function(feature){
@@ -143,7 +145,9 @@ function initMap(){
       console.log('You clicked here '+ feature.title);
     var locationName = document.getElementById('locationName');
     var locationImage = document.getElementById('locationImage').src=feature.image;
+    var description = document.getElementById('time');
     locationName.innerHTML = '<h2>' + feature.title + '</h2>';
+    description.innerHTML = '<h3>' + feature.description + '</h3>';
     })
   });
 
