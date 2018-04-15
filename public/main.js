@@ -162,7 +162,8 @@ function initMap(){
   }
 
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(panel);
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(wrapper);
+  // map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(panel);
 
 }
 
@@ -295,6 +296,45 @@ function initMap(){
 
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");
+
+
+
+
+
+
+
+$(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
+
+    trigger.click(function () {
+      hamburger_cross();
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });
+});
+
+
+
+
 
 Array.from(thumbUp).forEach(function(element) {
   element.addEventListener('click', function(){
