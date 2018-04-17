@@ -162,7 +162,7 @@ function initMap(){
   }
 
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(wrapper);
+  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(wrapper);
   // map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(panel);
 
 }
