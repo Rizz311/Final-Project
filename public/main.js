@@ -331,8 +331,8 @@ function initMap(){
 
 });
 
-var thumbUp = document.getElementsByClassName("fa-thumbs-up");
-var trash = document.getElementsByClassName("fa-trash");
+var thumbUp = document.getElementByClassName("fa-thumbs-up");
+var trash = document.getElementByClassName("fa-trash");
 
 
 
