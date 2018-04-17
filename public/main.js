@@ -173,6 +173,43 @@ function initMap(){
     window.location.href= 'http://localhost:8080/';
   });
 
+
+
+
+//Sidebar script
+  $(document).ready(function () {
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+       isClosed = false;
+
+      trigger.click(function () {
+        hamburger_cross();
+      });
+
+      function hamburger_cross() {
+
+        if (isClosed == true) {
+          overlay.hide();
+          trigger.removeClass('is-open');
+          trigger.addClass('is-closed');
+          isClosed = false;
+        } else {
+          overlay.show();
+          trigger.removeClass('is-closed');
+          trigger.addClass('is-open');
+          isClosed = true;
+        }
+    }
+
+    $('[data-toggle="offcanvas"]').click(function () {
+          $('#wrapper').toggleClass('toggled');
+    });
+  });
+
+
+
+
+//Particles for the login
   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
     particlesJS('particles-js',
       {
