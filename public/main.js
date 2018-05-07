@@ -151,8 +151,9 @@ function initMap(){
     document.getElementById('panel').classList.add('panelShow');
     })
     var closePanel = document.getElementById('close');
-    $('#close').click(function(){
-      alert('this will close sidebar your close')
+    closePanel.addListener('click',function(){
+  //  $('#close').click(function(){
+      document.getElementById('panel').classList.remove('panelShow');
     })
   });
 
