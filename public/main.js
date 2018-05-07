@@ -150,6 +150,10 @@ function initMap(){
     description.innerHTML = '<h3>' + feature.description + '</h3>';
     document.getElementById('panel').classList.add('panelShow');
     })
+    var closePanel = document.getElementById('close');
+    $('#close').click(function(){
+      alert('this will close sidebar your close')
+    })
   });
 
   var legend = document.getElementById('legend');
