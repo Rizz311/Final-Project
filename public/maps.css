@@ -8,12 +8,26 @@
   border: 1px solid black;
 }
 
+.container {
+  position: relative;
+  height: 100%;
+}
+
+#map, .sidePanel {
+  position: absolute;
+}
+
 .sidePanel {
+  display: none;
   border: 1px solid white;
-  z-index: 1;
+  z-index: 1500000;
   height: 90%;
   width: 20%;
   background: grey;
+}
+
+.panelShow {
+  display: block;
 }
 
 .locationName {

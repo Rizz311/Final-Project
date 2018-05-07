@@ -148,6 +148,7 @@ function initMap(){
     var description = document.getElementById('time');
     locationName.innerHTML = '<h2>' + feature.title + '</h2>';
     description.innerHTML = '<h3>' + feature.description + '</h3>';
+    document.getElementById('panel').classList.add('panelShow');
     })
   });
 
