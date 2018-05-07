@@ -150,11 +150,10 @@ function initMap(){
     description.innerHTML = '<h3>' + feature.description + '</h3>';
     document.getElementById('panel').classList.add('panelShow');
     })
+  });
     var closePanel = document.getElementById('close');
-    closePanel.addListener('click',function(){
-  //  $('#close').click(function(){
-      document.getElementById('panel').classList.remove('panelShow');
-    })
+    closePanel.addEventListener('click', function(){
+    document.getElementById('panel').classList.remove('panelShow');
   });
 
   var legend = document.getElementById('legend');
