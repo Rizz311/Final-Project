@@ -99,3 +99,31 @@ insert into locations (
     'I',
     'Membership required. The gym accepts the community center membership.'
 );
+--Shelburne-----******************************************************
+insert into locations (
+    name,
+    latitude,
+    longitude,
+    in_out,
+    description)
+  values(
+
+    'Shelburne',
+    42.322427,
+    -71.090405,
+    'I',
+    'The Shelburne has a different membership program than the other gyms. Their memberships are $20 last the year and are good at the other gyms. They have a different system and will not take the other gym memberships.'
+);
+insert into locations (
+    name,
+    latitude,
+    longitude,
+    in_out,
+    description)
+  values(
+    'Stoughton Family Fitness',
+    42.137931,
+    -71.125091,
+    'I',
+    'Stoughton has '
+);
