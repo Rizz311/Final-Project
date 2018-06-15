@@ -126,4 +126,16 @@ insert into locations (
     -71.125091,
     'I',
     'Stoughton has '
+);insert into locations (
+    name,
+    latitude,
+    longitude,
+    in_out,
+    description)
+  values(
+    'Titus Sparrow Park',
+    42.343629,
+    -71.080232
+    'O',
+    'This is a outdoor court'
 );
