@@ -135,7 +135,7 @@ insert into locations (
   values(
     'Titus Sparrow Park',
     42.343629,
-    -71.080232
+    -71.080232,
     'O',
     'This is a outdoor court'
 );

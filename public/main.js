@@ -55,7 +55,8 @@ function initMap(){
       position: new google.maps.LatLng(42.332047, -71.098164), //Tobin CC
       type: 'cc',
       title: 'Tobin Community Center',
-      image: 'img/tobin.jpg'
+      image: 'img/tobin.jpg',
+      description: 'The Tobin is open on Tuesday\'s and is open from 6 to 9 and as of right now it\'s free. Go play ball and keep the drama at home don\'t ruin a good thing for everyone.'
     }, {
       position: new google.maps.LatLng(42.277112, -71.090677), //Mildred
       type: 'cc',
