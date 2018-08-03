@@ -132,7 +132,6 @@ function initMap(){
       type: 'ymca',
       title: 'Chinatown Y',
       image: 'img/wangy.jpg'
-
     }
   ];     // Creates corrosponding markers
   features.forEach(function(feature){
